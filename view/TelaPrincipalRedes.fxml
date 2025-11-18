@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TelaPrincipalController">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="900.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/simuladorRedes.jpg" />
+         </image>
+      </ImageView>
+      <TextArea fx:id="textAreaMensagemFinal" editable="false" prefHeight="70.0" prefWidth="10.0" AnchorPane.bottomAnchor="380.0" AnchorPane.leftAnchor="607.0" AnchorPane.rightAnchor="143.0" AnchorPane.topAnchor="135.0" />
+      <TextArea fx:id="textAreaMensagemOriginal" layoutX="617.0" layoutY="145.0" prefHeight="70.0" prefWidth="10.0" promptText="Digite sua mensagem..." AnchorPane.bottomAnchor="380.0" AnchorPane.leftAnchor="136.0" AnchorPane.rightAnchor="613.0" AnchorPane.topAnchor="135.0" />
+      <ComboBox fx:id="comboBoxCodificacao" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="150.0" promptText="Codificação" AnchorPane.leftAnchor="365.0" AnchorPane.topAnchor="175.0" />
+      <TextArea fx:id="textAreaCodificada" editable="false" layoutX="146.0" layoutY="145.0" prefHeight="70.0" prefWidth="10.0" AnchorPane.bottomAnchor="250.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="550.0" AnchorPane.topAnchor="293.0" />
+      <Canvas fx:id="canvasAnimacao" height="90.0" width="440.0" AnchorPane.leftAnchor="230.0" AnchorPane.topAnchor="390.0" />
+      <TextArea fx:id="textAreaDecodificada" editable="false" layoutX="110.0" layoutY="303.0" prefHeight="70.0" prefWidth="10.0" AnchorPane.bottomAnchor="250.0" AnchorPane.leftAnchor="570.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="290.0" />
+      <Button fx:id="botaoEnviar" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#enviar" prefHeight="50.0" prefWidth="300.0" text="Enviar" AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="525.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <ComboBox fx:id="comboBoxEnquadramento" layoutX="365.0" layoutY="128.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="150.0" promptText="Enquadramento" />
+      <ComboBox fx:id="comboBoxErro" layoutX="365.0" layoutY="220.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="150.0" promptText="Erro" />
+      <ComboBox fx:id="comboBoxControleErro" layoutX="365.0" layoutY="266.0" prefHeight="40.0" prefWidth="193.0" promptText="Controle de Erros" />
+      <ComboBox fx:id="comboBoxFluxo" layoutX="365.0" layoutY="310.0" prefHeight="40.0" prefWidth="193.0" promptText="Controle de fluxo" />
+   </children>
+</AnchorPane>
