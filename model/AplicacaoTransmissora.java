@@ -6,9 +6,34 @@
 * Nome.............: AplicacaoTransmissora
 * Funcao...........: Envia a mensagem captada pelo controller para a proxima camada da aplicacao
 *************************************************************** */
-
 package model;
 
-public class AplicacaoTransmissora {
+import util.Erro;
 
+public class AplicacaoTransmissora {
+    private CamadaAplicacaoTransmissora camadaAplicacaoTransmissora;
+
+  /**************************************************************
+  * Metodo: AplicacaoTransmissora
+  * Funcao: contrutor com referencia a camada aplicacao tx
+  * @param camadaAplicacaoTransmissora | instancia da camadaAplicacaoTransmissora
+  * @return void 
+  * ********************************************************* */
+    public AplicacaoTransmissora(CamadaAplicacaoTransmissora camadaAplicacaoTransmissora) {
+      this.camadaAplicacaoTransmissora = camadaAplicacaoTransmissora;
+    } // fim do construtor
+
+
+  /**************************************************************
+  * Metodo: transmitir
+  * Funcao: inicia a 
+  * @param mensagem | mensagem que vai ser transmitida
+  * @return void 
+  * ********************************************************* */
+    public void transmitir(String mensagem) throws Erro {
+      // verificacao de mensagem nula para enviar a mensagem
+      if(!mensagem.isEmpty() && mensagem != null) {
+        this.camadaAplicacaoTransmissora.trasmitir(mensagem);
+      }// fim do if
+    } // fim do metodo
 } // Fim da classe
