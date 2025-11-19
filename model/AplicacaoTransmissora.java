@@ -33,7 +33,7 @@ public class AplicacaoTransmissora {
     public void transmitir(String mensagem) throws Erro {
       // verificacao de mensagem nula para enviar a mensagem
       if(!mensagem.isEmpty() && mensagem != null) {
-        this.camadaAplicacaoTransmissora.trasmitir(mensagem);
+        this.camadaAplicacaoTransmissora.transmitir(mensagem);
       }// fim do if
     } // fim do metodo
 } // Fim da classe
