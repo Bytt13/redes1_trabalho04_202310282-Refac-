@@ -32,7 +32,7 @@ public class Auxiliares {
         // se o bit for 1, precisamos calcular a posicao
         if(bit == 1) {
           int ind = cont / 32; // calcula o indice que o bit vai alocar
-          int pos = 32 - (cont % 32); //calcula a posicao do bit
+          int pos = 31 - (cont % 32); //calcula a posicao do bit
 
           pack[ind] = pack[ind] | (1 << pos); // armazena o bit no pacote
         } // fim do if
@@ -54,7 +54,7 @@ public class Auxiliares {
     char[] caracteres = new char[totalChar];
 
     //loop para reconstruir os char
-    for(int i =0; i < totalChar; i++){
+    for(int i = 0; i < totalChar; i++){
       int valorChar = 0; //incializa o char como 0
 
       //loop para ler os 8 bits
@@ -196,6 +196,12 @@ public class Auxiliares {
   * ********************************************************* */
   public static int lerBits(int[] array, int posInicialBit, int numBits) {
     int valorLido = 0; // o valor que sera retornado
+
+    // Garante que não tentemos ler mais de 32 bits (o limite de um int)
+    if (numBits > 32) {
+      System.out.println("Erro: Nao eh possivel ler mais de 32 bits para um unico int.");
+      return 0;
+    } // fim do if
 
     //loop para ler os bits
     for (int i = 0; i < numBits; i++) {

@@ -631,7 +631,6 @@ public class CamadaEnlaceDadosReceptora {
 		while ((1 << quantBitsParidade) < (totalBitsReal + 1)) {
 			quantBitsParidade++;
 		}
-		quantBitsParidade--;
 		
 		if (quantBitsParidade < 0) return new int[0];
 		

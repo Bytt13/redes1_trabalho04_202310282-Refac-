@@ -300,12 +300,13 @@ public class TelaPrincipalController {
 
   /**************************************************************
   * Metodo: opcaoSelecionada
-  * Funcao: (HELPER) converte a string da ComboBox para um int
+  * Funcao: converte a string da ComboBox para um int
+  * @param void
   * @return int | inteiro equivalente a opcao
   * ********************************************************* */
   public int codCodification() {
-    String opcaoChoiceBox = comboBoxCodificacao.getValue();
-    switch (opcaoChoiceBox) {
+    String opcao = comboBoxCodificacao.getValue();
+    switch (opcao) {
       case "Binario": return 0;
       case "Manchester": return 1;
       case "Manchester Diferencial": return 2;
@@ -322,8 +323,8 @@ public class TelaPrincipalController {
   * @return int | inteiro equivalente a opcao
   * ********************************************************* */
   public int enquadCodification() {
-    String opcaoChoiceBox = comboBoxEnquadramento.getValue();
-    switch (opcaoChoiceBox) {
+    String opcao = comboBoxEnquadramento.getValue();
+    switch (opcao) {
       case "Contagem de Caracteres": return 0;
       case "Insercao de Bytes": return 1;
       case "Insercao de Bits": return 2;
@@ -341,8 +342,8 @@ public class TelaPrincipalController {
   * @return int | inteiro equivalente a opcao
   * ********************************************************* */
   public int erroCodification() {
-    String opcaoChoiceBox = comboBoxControleErro.getValue();
-    switch (opcaoChoiceBox) {
+    String opcao = comboBoxControleErro.getValue();
+    switch (opcao) {
       case "Bit de Paridade par": return 0;
       case "Bit de Paridade impar": return 1;
       case "CRC": return 2;
@@ -360,8 +361,8 @@ public class TelaPrincipalController {
   * @return int | inteiro equivalente a opcao
   * ********************************************************* */
   public int fluxoCodification() {
-    String opcaoChoiceBox = comboBoxFluxo.getValue();
-    switch (opcaoChoiceBox) {
+    String opcao = comboBoxFluxo.getValue();
+    switch (opcao) {
       case "Janela deslizante 1 bit": return 0;
       case "Go Back N": return 1;
       case "Retransmissao Seletiva": return 2;
@@ -444,6 +445,16 @@ public class TelaPrincipalController {
       return 0.0; // retorna 0 em caso de erro na conversao
     } // fim try
   } // fim getValorTaxaErro
+
+  /**************************************************************
+  * Metodo: getTaxaErro
+  * Funcao: retorna o valor da taxa de erro
+  * @param void
+  * @return double | valor double da taxa de erro
+  * ********************************************************* */
+  public String getTaxaErro() {
+    return comboBoxErro.getValue();
+  } // fim do metodo
 
   /**************************************************************
   * Metodo: limparInterface
