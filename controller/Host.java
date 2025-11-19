@@ -70,8 +70,8 @@ public class Host {
   * @return void
   * ********************************************************* */
   public void setMeioDeComunicacao(MeioDeComunicacao meio) {
-    //this.camadaFisicaTransmissora.setMeioDeComunicacao(meio);
-		//this.camadaFisicaReceptora.setMeioDeComunicacao(meio);
+    this.camadaFisicaTransmissora.setMeioDeComunicacao(meio);
+		this.camadaFisicaReceptora.setMeioDeComunicacao(meio);
   } // fim do metodo
 
   /**************************************************************
@@ -81,6 +81,6 @@ public class Host {
   * @return void
   * ********************************************************* */
   public void enviar(String mensagem) throws Erro {
-    //this.aplicacaoTransmissora.transmitir(mensagem);
+    this.aplicacaoTransmissora.transmitir(mensagem);
   } // fim do metodo
 } // fim da classe

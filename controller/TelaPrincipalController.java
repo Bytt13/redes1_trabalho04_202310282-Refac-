@@ -343,9 +343,9 @@ public class TelaPrincipalController {
   public int erroCodification() {
     String opcaoChoiceBox = comboBoxControleErro.getValue();
     switch (opcaoChoiceBox) {
-      case "Bit de Paridade Par": return 0;
-      case "Bit de Paridade Impar": return 1;
-      case "CRC-32 (IEEE 802)": return 2;
+      case "Bit de Paridade par": return 0;
+      case "Bit de Paridade impar": return 1;
+      case "CRC": return 2;
       case "Codigo de Hamming": return 3;
       default:
         System.out.println("Problemas no metodo opcaoControleErroSelecionada");
@@ -362,9 +362,9 @@ public class TelaPrincipalController {
   public int fluxoCodification() {
     String opcaoChoiceBox = comboBoxFluxo.getValue();
     switch (opcaoChoiceBox) {
-      case "Janela Deslizante de 1 Bit": return 0;
-      case "Janela Deslizante Go-Back-N": return 1;
-      case "Janela Deslizante com Retransmissao Seletiva": return 2;
+      case "Janela deslizante 1 bit": return 0;
+      case "Go Back N": return 1;
+      case "Retransmissao Seletiva": return 2;
       default:
         System.out.println("Problemas no metodo opcaoControleFluxoSelecionada");
         return 0;
